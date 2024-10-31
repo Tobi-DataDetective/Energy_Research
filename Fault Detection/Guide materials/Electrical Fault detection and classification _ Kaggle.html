@@ -1,0 +1,187 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Electrical Fault detection and classification | Kaggle</title>
+  <meta charset="utf-8" />
+    <meta name="robots" content="index, follow" />
+  <meta name="description" content="A collection of line currents and voltages for different fault conditions" />
+  <meta name="turbolinks-cache-control" content="no-cache" />
+    <meta name="keywords" content="earth and nature,electronics,classification,intermediate,categorical" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#008ABC" />
+  <script nonce="O1gy5/WibtQadbWy1rIE&#x2B;g==" type="text/javascript">
+    window["pageRequestStartTime"] = 1683811669070;
+    window["pageRequestEndTime"] = 1683811669222;
+    window["initialPageLoadStartTime"] = new Date().getTime();
+  </script>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="anonymous" /><link rel="preconnect" href="https://stats.g.doubleclick.net" /><link rel="preconnect" href="https://storage.googleapis.com" /><link rel="preconnect" href="https://apis.google.com" />
+  <link href="/static/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="manifest" href="/static/json/manifest.json" crossorigin="use-credentials">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/icon?family=Google+Material+Icons&display=block"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i&display=swap"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/icon?family=Google+Material+Icons&display=block"
+    rel="stylesheet" media="print" id="async-google-font-1" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i&display=swap"
+    rel="stylesheet" media="print" id="async-google-font-2" />
+  <script nonce="O1gy5/WibtQadbWy1rIE&#x2B;g==" type="text/javascript">
+    const styleSheetIds = ["async-google-font-1", "async-google-font-2"];
+    styleSheetIds.forEach(function (id) {
+      document.getElementById(id).addEventListener("load", function() {
+        this.media = "all";
+      });
+    });
+  </script>
+
+    <link rel="canonical" href="/datasets/esathyaprakash/electrical-fault-detection-and-classification" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/vendor.css?v=347bcfc883299a7a24f3" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/app.css?v=81f9b0bf40d37d37cc8f" />
+  
+    
+ 
+      <script nonce="O1gy5/WibtQadbWy1rIE&#x2B;g==">
+        try{(function(a,s,y,n,c,h,i,d,e){d=s.createElement("style");
+        d.appendChild(s.createTextNode(""));s.head.appendChild(d);d=d.sheet;
+        y=y.map(x => d.insertRule(x + "{ opacity: 0 !important }"));
+        h.start=1*new Date;h.end=i=function(){y.forEach(x => x<d.cssRules.length ? d.deleteRule(x) : {})};
+        (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+        })(window,document,['.site-header-react__nav'],'dataLayer',2000,{'GTM-52LNT9S':true});}catch(ex){}
+    </script>
+    <script nonce="O1gy5/WibtQadbWy1rIE&#x2B;g==">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-T7QHS60L4Q', {
+            'optimize_id': 'GTM-52LNT9S',
+            'displayFeaturesTask': null,
+            'send_page_view': false,
+            'content_group1': 'Datasets'
+        });
+    </script>
+    <script nonce="O1gy5/WibtQadbWy1rIE&#x2B;g==" async src="https://www.googletagmanager.com/gtag/js?id=G-T7QHS60L4Q"></script>
+
+  
+    
+    <meta property="og:url" content="/datasets/esathyaprakash/electrical-fault-detection-and-classification" />
+    <meta property="og:title" content="Electrical Fault detection and classification" />
+    <meta property="og:description" content="A collection of line currents and voltages for different fault conditions" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://storage.googleapis.com/kaggle-datasets-images/1358964/2258206/6afef1cbea4bbf9099d6058615c3f63c/dataset-card.png?t=2021-05-22-05-40-36" />
+    <meta property="fb:app_id" content="2665027677054710" />
+
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaggledatasets" />
+        <meta name="twitter:creator" content="@junior_ghost_00" />
+
+
+  <meta name="twitter:site" content="@Kaggle" /> 
+  
+    
+    <script nonce="O1gy5/WibtQadbWy1rIE+g==" type="application/ld+json">{"@context":"http://schema.org/","@type":"Dataset","name":"Electrical Fault detection and classification","description":"### Context\n\nThe transmission line is the most crucial part of the power system. The requirement of power and its allegiance has grown up exponentially over the modern era, and the prominent role of a transmission line is to transmit electric power from the source area to the distribution network. The electrical power system consists of so many complex dynamic and interacting elements that are always prone to disturbance or an electrical fault.\nHigh-capacity electrical generating power plants and the grid concept, i.e., synchronized electrical power plants and geographical d displaced grids, required fault detection and operation of protection equipment in minimum possible time to remain stable. The faults on electrical power system transmission lines are supposed to be first detected and classified correctly and should be cleared in the least possible time. The protection system used for a transmission line can also initiate the other relays to protect the power system from outages. An exemplary fault detection system provides a practical, reliable, fast, and secure way of a relaying operation. The application of pattern recognition technology could help discriminate against faulty and healthy electrical power systems. It also enables us to differentiate among three phases of a three-phase power system experiencing a fault. \nThe artificial neural networks (ANNs) are potent in identifying the faulty pattern and classification of fault by pattern recognition. An efficient and reliable protection method should perform more than satisfactorily under various system operating conditions and different electrical network parameters. As far as ANNs are considered, they exhibit excellent normalization and generalization capability, immunity to noise, robustness, and fault tolerance. Therefore, the declaration of fault made by the ANN-based fault detection method should not be affected seriously by variations in various power system parameters.\nThe various electrical transient system faults are modeled, simulated, and Various ANN-based algorithms are developed to recognize these faulty patterns. The performance of the proposed algorithm is evaluated by simulating the various types of fault and the results obtained are encouraging.\n\n\n### Content\n\nWe have modeled a power system in MATLAB to simulate fault analysis. The power system consists of 4 generators of 11 × 10^3 V, each pair located at each end of the transmission line. Transformers are present in between to simulate and study the various faults at the midpoint of the transmission line.\n![power system](https://github.com/KingArthur000/Electrical-Fault-detection-and-classification/blob/main/pics/power%20system.png?raw=true)\nWe simulate the circuit under normal conditions as well as under various fault conditions. We then collect and save the measured Line Voltages and Line Currents at the output side of the power system. We collected nearly 12000 data points, and then the data is labeled.\n\n\n### Acknowledgements\n\nWe wouldn't be here without the help of others.\nWe want to extend our gratitude to the authors of [this](https://springerplus.springeropen.com/articles/10.1186/s40064-015-1080-x#:~:text=section%20is%20conclusion.-,Artificial%20neural%20network,form%20can%20be%20dealt%20with.) paper for helping us out in publishing this dataset.","url":"https://www.kaggle.com/esathyaprakash/electrical-fault-detection-and-classification","version":2,"keywords":["subject, earth and nature","subject, science and technology, electronics","task, classification","audience, intermediate","data type, categorical"],"license":{"@type":"CreativeWork","name":"CC0: Public Domain","url":"https://creativecommons.org/publicdomain/zero/1.0/"},"identifier":["1358964"],"includedInDataCatalog":{"@type":"DataCatalog","name":"Kaggle","url":"https://www.kaggle.com"},"creator":{"@type":"Person","name":"E Sathya Prakash","url":"https://www.kaggle.com/esathyaprakash","image":"https://storage.googleapis.com/kaggle-avatars/thumbnails/5225015-kg.jpg"},"distribution":[{"@type":"DataDownload","requiresSubscription":true,"encodingFormat":"zip","fileFormat":"zip","contentUrl":"https://www.kaggle.com/datasets/esathyaprakash/electrical-fault-detection-and-classification/download?datasetVersionNumber=2","contentSize":"704230 bytes"}],"commentCount":2,"dateModified":"2021-05-22T06:36:45.777Z","discussionUrl":"https://www.kaggle.com/esathyaprakash/electrical-fault-detection-and-classification/discussion","alternateName":"A collection of line currents and voltages for different fault conditions","isAccessibleForFree":true,"thumbnailUrl":"https://storage.googleapis.com/kaggle-datasets-images/1358964/2258206/6afef1cbea4bbf9099d6058615c3f63c/dataset-card.png?t=2021-05-22-05-40-36","interactionStatistic":[{"@type":"InteractionCounter","interactionType":"http://schema.org/CommentAction","userInteractionCount":2},{"@type":"InteractionCounter","interactionType":"http://schema.org/DownloadAction","userInteractionCount":4189},{"@type":"InteractionCounter","interactionType":"http://schema.org/ViewAction","userInteractionCount":37819},{"@type":"InteractionCounter","interactionType":"http://schema.org/LikeAction","userInteractionCount":96}]}</script>
+
+
+  
+    
+
+  
+    
+
+
+    <script nonce="O1gy5/WibtQadbWy1rIE&#x2B;g==">window['useKaggleAnalytics'] = true;</script>
+
+  <script id="gapi-target" nonce="O1gy5/WibtQadbWy1rIE&#x2B;g==" src="https://apis.google.com/js/api.js" defer
+    async></script>
+  <script nonce="O1gy5/WibtQadbWy1rIE+g==" src="/static/assets/runtime.js?v=4c908038c36a9c538f34" data-turbolinks-track="reload"></script>
+  <script nonce="O1gy5/WibtQadbWy1rIE+g==" src="/static/assets/vendor.js?v=67cff1764a8613cd7280" data-turbolinks-track="reload"></script>
+  <script nonce="O1gy5/WibtQadbWy1rIE+g==" src="/static/assets/app.js?v=e570e1840d5e1ba4d30f" data-turbolinks-track="reload"></script>
+    <script nonce="O1gy5/WibtQadbWy1rIE&#x2B;g==" type="text/javascript">
+      window.kaggleStackdriverConfig = {
+        key: 'AIzaSyA4eNqUdRRskJsCZWVz-qL655Xa5JEMreE',
+        projectId: 'kaggle-161607',
+        service: 'web-fe',
+        version: 'ci',
+        userId: '0'
+      }
+    </script>
+</head>
+
+<body data-turbolinks="false">
+  <main>
+    
+
+
+
+
+
+<div id="site-container"></div>
+
+<div id="site-body" class="hide">
+    
+
+<div data-component-name="DatasetMaterialContainer" style="display: flex; flex-direction: column; flex: 1 0 auto;"></div><script class="kaggle-component" nonce="O1gy5/WibtQadbWy1rIE+g==">var Kaggle=window.Kaggle||{};Kaggle.State=Kaggle.State||[];Kaggle.State.push({"basics":{"datasetId":1358964,"slug":"electrical-fault-detection-and-classification","title":"Electrical Fault detection and classification","description":"### Context\n\nThe transmission line is the most crucial part of the power system. The requirement of power and its allegiance has grown up exponentially over the modern era, and the prominent role of a transmission line is to transmit electric power from the source area to the distribution network. The electrical power system consists of so many complex dynamic and interacting elements that are always prone to disturbance or an electrical fault.\nHigh-capacity electrical generating power plants and the grid concept, i.e., synchronized electrical power plants and geographical d displaced grids, required fault detection and operation of protection equipment in minimum possible time to remain stable. The faults on electrical power system transmission lines are supposed to be first detected and classified correctly and should be cleared in the least possible time. The protection system used for a transmission line can also initiate the other relays to protect the power system from outages. An exemplary fault detection system provides a practical, reliable, fast, and secure way of a relaying operation. The application of pattern recognition technology could help discriminate against faulty and healthy electrical power systems. It also enables us to differentiate among three phases of a three-phase power system experiencing a fault. \nThe artificial neural networks (ANNs) are potent in identifying the faulty pattern and classification of fault by pattern recognition. An efficient and reliable protection method should perform more than satisfactorily under various system operating conditions and different electrical network parameters. As far as ANNs are considered, they exhibit excellent normalization and generalization capability, immunity to noise, robustness, and fault tolerance. Therefore, the declaration of fault made by the ANN-based fault detection method should not be affected seriously by variations in various power system parameters.\nThe various electrical transient system faults are modeled, simulated, and Various ANN-based algorithms are developed to recognize these faulty patterns. The performance of the proposed algorithm is evaluated by simulating the various types of fault and the results obtained are encouraging.\n\n\n### Content\n\nWe have modeled a power system in MATLAB to simulate fault analysis. The power system consists of 4 generators of 11 \u00D7 10^3 V, each pair located at each end of the transmission line. Transformers are present in between to simulate and study the various faults at the midpoint of the transmission line.\n![power system](https://github.com/KingArthur000/Electrical-Fault-detection-and-classification/blob/main/pics/power%20system.png?raw=true)\nWe simulate the circuit under normal conditions as well as under various fault conditions. We then collect and save the measured Line Voltages and Line Currents at the output side of the power system. We collected nearly 12000 data points, and then the data is labeled.\n\n\n### Acknowledgements\n\nWe wouldn\u0027t be here without the help of others.\nWe want to extend our gratitude to the authors of [this](https://springerplus.springeropen.com/articles/10.1186/s40064-015-1080-x#:~:text=section%20is%20conclusion.-,Artificial%20neural%20network,form%20can%20be%20dealt%20with.) paper for helping us out in publishing this dataset.","viewCount":37819,"downloadCount":4189,"scriptCount":13,"topicCount":2,"owner":{"id":5225015,"imageUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/5225015-kg.jpg","name":"E Sathya Prakash","profileUrl":"/esathyaprakash","slug":"esathyaprakash","userTier":"CONTRIBUTOR"},"license":{"id":1,"name":"CC0: Public Domain","url":"https://creativecommons.org/publicdomain/zero/1.0/"},"overview":"A collection of line currents and voltages for different fault conditions","collaboratorList":{"owner":{"userId":5225015,"profileUrl":"/esathyaprakash","thumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/5225015-kg.jpg","name":"E Sathya Prakash","slug":"esathyaprakash","userTier":"CONTRIBUTOR","type":"OWNER"}},"coverImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/1358964/2258206/6afef1cbea4bbf9099d6058615c3f63c/dataset-cover.png?t=2021-05-22-05-40-36","data":{"totalSize":704230,"isFileset":true,"canDownload":true,"firestorePath":"Sc95wNLs5fRxgxvsQoUQ/versions/ynMu5gemUSo8VTCdL8f2","downloadUrl":"/datasets/esathyaprakash/esathyaprakash/download?datasetVersionNumber=2","versionId":2299351,"id":1383001},"voteCount":96,"medalUrl":"/static/images/medals/datasets/silverl@2x.png","downloadUrl":"/datasets/esathyaprakash/electrical-fault-detection-and-classification/download?datasetVersionNumber=2","lastUpdateTime":"2021-05-22T06:36:45.777Z","datasetVersionNumber":2,"creatorDisplayName":"E Sathya Prakash","cardImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/1358964/2258206/6afef1cbea4bbf9099d6058615c3f63c/dataset-card.png?t=2021-05-22-05-40-36","categories":{"tags":[{"id":7000,"name":"earth and nature","fullPath":"subject \u003E earth and nature","listingUrl":"/datasets?group=public\u0026tagids=7000","description":"","datasetCount":26439,"competitionCount":9,"notebookCount":274,"tagUrl":"/tags/natural-and-physical-sciences","displayName":"Earth and Nature"},{"id":12200,"name":"electronics","fullPath":"subject \u003E science and technology \u003E electronics","listingUrl":"/datasets?group=public\u0026tagids=12200","description":"Electronics is the science of controlling electrical energy electrically, in which the electrons have a fundamental role.","datasetCount":4084,"notebookCount":221,"tagUrl":"/tags/electronics","displayName":"Electronics"},{"id":13302,"name":"classification","fullPath":"task \u003E classification","listingUrl":"/datasets?group=public\u0026tagids=13302","description":"","datasetCount":3376,"competitionCount":7,"notebookCount":16943,"tagUrl":"/tags/classification","displayName":"Classification","googleMaterialIcon":"category"},{"id":13103,"name":"intermediate","fullPath":"audience \u003E intermediate","listingUrl":"/datasets?group=public\u0026tagids=13103","description":"","datasetCount":2525,"notebookCount":3023,"tagUrl":"/tags/intermediate","displayName":"Intermediate"},{"id":6603,"name":"categorical","fullPath":"data type \u003E categorical","listingUrl":"/datasets?group=public\u0026tagids=6603","description":"Categorical data are observations that fall into discrete categories, like dog breed, dog color or whether or not a dog likes chew toys.","datasetCount":1419,"notebookCount":1904,"tagUrl":"/tags/categorical-data","displayName":"Categorical"}]},"datasetExternalUrl":"https://www.kaggle.com/datasets/esathyaprakash/electrical-fault-detection-and-classification","ownerTwitter":"junior_ghost_00","forumId":1378051,"datasetVersionId":2258354,"canCreateTasks":true,"moderationStatus":"PRIVATED_MODERATION_STATUS_NO_ABUSE","lastVersionNumber":2,"diffType":"VERSIONED"},"accessedViaHashLink":false});performance && performance.mark && performance.mark("DatasetMaterialContainer.componentCouldBootstrap");</script><script nonce="O1gy5/WibtQadbWy1rIE&#x2B;g==" type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+    preferredFont: "TeX",
+    availableFonts: ["STIX", "TeX"],
+    linebreaks: {
+    automatic: true
+    },
+    EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+    inlineMath: [["\\(", "\\)"], ["\\\\(", "\\\\)"]],
+    displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+    processEscapes: true,
+    ignoreClass: "tex2jax_ignore|dno"
+    },
+    TeX: {
+    noUndefined: {
+    attributes: {
+    mathcolor: "red",
+    mathbackground: "#FFEEEE",
+    mathsize: "90%"
+    }
+    }
+    },
+    Macros: {
+    href: "{}"
+    },
+    skipStartupTypeset: true,
+    messageStyle: "none",
+    extensions: ["Safe.js"],
+    });
+</script>
+<script type="text/javascript" nonce="O1gy5/WibtQadbWy1rIE&#x2B;g==">
+  window.addEventListener("DOMContentLoaded", () => {
+    const head = document.getElementsByTagName("head")[0];
+    const useProdHosts = ["www.kaggle.com", "admin.kaggle.com"];
+    const subdomain = useProdHosts.includes(window.location.hostname) ? "www" : "staging";
+
+    const lib = document.createElement("script");
+    lib.type = "text/javascript";
+    lib.src = `https://${subdomain}.kaggleusercontent.com/static/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML`;
+    head.appendChild(lib);
+  });
+</script>
+
+
+
+
+
+</div>
+
+
+
+
+  </main>
+</body>
+
+</html>
